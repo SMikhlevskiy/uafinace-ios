@@ -15,9 +15,9 @@ class FinanceUA: Mappable {
     
     func mapping(map: Map) {
         date <- map["date"]
-        for org: (map["organizations"] as [Any]){
-            organizations = Mapper<Organization>().map(JSON: org as! [String:Any])
-        }
+//        for org: (map["organizations"] as [Any]){
+//            organizations = Mapper<Organization>().map(JSON: org as! [String:Any])
+//        }
     }
     
     required init?(map: Map) {

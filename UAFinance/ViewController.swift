@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import ObjectMapper
+import AlamofireObjectMapper
 
 class ViewController: UIViewController {
 
@@ -19,22 +19,16 @@ class ViewController: UIViewController {
     }
     
     func getRequest(){
-        Alamofire.request("http://resources.finance.ua/ru/public/currency-cash.json").responseJSON { response in
-            if let json:[String:Any] = response.result.value as! [String : Any] {
-                //print("JSON: \(json)") // serialized json response
-                
-                let organizations: [Any] = json["organizations"] as! [Any]
-                
-                
-                for org in organizations {
-                    let organization = Mapper<Organization>().map(JSON: org as! [String:Any])
-                    
-                    print(organization?.title)
-                }
-                
-            
+        let url = "http://resources.finance.ua/ru/public/currency-cash.json"
+        
+        Alamofire.request(url).responseObject { (response: DataResponse<FinanceUA>) in
+            if let finaceUA = response.result.value {
+                print("date = \(finaceUA.date)")
+            } else {
+                print("error")
             }
         }
+        
     }
     
     
