@@ -24,6 +24,14 @@ class ViewController: UIViewController {
         Alamofire.request(url).responseObject { (response: DataResponse<FinanceUA>) in
             if let finaceUA = response.result.value {
                 print("date = \(finaceUA.date)")
+                print("org count=\(finaceUA.organizations.count)")
+                for organization in finaceUA.organizations {
+                    print(organization.title)
+                }
+                print("cities count=\(finaceUA.cities.count)")
+                for city in finaceUA.cities {
+                    print(city.value)
+                }
             } else {
                 print("error")
             }

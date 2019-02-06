@@ -11,13 +11,18 @@ import ObjectMapper
 
 class FinanceUA: Mappable {
     var date: String = ""
-    var organizations: [Organization] = []
+    var organizations = [Organization]()
+    var cities = [String:String]()
+    var currencies = [String:String]()
+    var orgTypes = [String:String]()
+    
     
     func mapping(map: Map) {
         date <- map["date"]
-//        for org: (map["organizations"] as [Any]){
-//            organizations = Mapper<Organization>().map(JSON: org as! [String:Any])
-//        }
+        organizations <- map["organizations"]
+        cities <- map["cities"]
+        currencies <- map["currencies"]
+        orgTypes <- map["orgTypes"]
     }
     
     required init?(map: Map) {

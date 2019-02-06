@@ -15,6 +15,7 @@
 		4E012B4121E3AC9200C4B755 /* Podfile in Sources */ = {isa = PBXBuildFile; fileRef = 4E012B4021E3AC9200C4B755 /* Podfile */; };
 		4E012B4321E3BD2200C4B755 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E012B4221E3BD2200C4B755 /* Organization.swift */; };
 		4E012B4521E3CA2E00C4B755 /* FinanceUA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E012B4421E3CA2E00C4B755 /* FinanceUA.swift */; };
+		5AF93A92220B2584002D4F7E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF93A91220B2584002D4F7E /* Currency.swift */; };
 		D80C1A7638976DAC3439C87B /* Pods_UAFinance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D39C06974D980B3DA24BEF3 /* Pods_UAFinance.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		4E012B4221E3BD2200C4B755 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		4E012B4421E3CA2E00C4B755 /* FinanceUA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceUA.swift; sourceTree = "<group>"; };
 		58CF6555D1B230214381C329 /* Pods-UAFinance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UAFinance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UAFinance/Pods-UAFinance.debug.xcconfig"; sourceTree = "<group>"; };
+		5AF93A91220B2584002D4F7E /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		7D39C06974D980B3DA24BEF3 /* Pods_UAFinance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UAFinance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -68,16 +70,33 @@
 		4E012B2D21E3AA6300C4B755 /* UAFinance */ = {
 			isa = PBXGroup;
 			children = (
+				5AF93A90220B19AC002D4F7E /* Controllers */,
+				5AF93A8F220B1881002D4F7E /* Model */,
 				4E012B2E21E3AA6300C4B755 /* AppDelegate.swift */,
-				4E012B3021E3AA6300C4B755 /* ViewController.swift */,
-				4E012B4221E3BD2200C4B755 /* Organization.swift */,
-				4E012B4421E3CA2E00C4B755 /* FinanceUA.swift */,
 				4E012B3221E3AA6300C4B755 /* Main.storyboard */,
 				4E012B3521E3AA6600C4B755 /* Assets.xcassets */,
 				4E012B3721E3AA6600C4B755 /* LaunchScreen.storyboard */,
 				4E012B3A21E3AA6600C4B755 /* Info.plist */,
 			);
 			path = UAFinance;
+			sourceTree = "<group>";
+		};
+		5AF93A8F220B1881002D4F7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E012B4221E3BD2200C4B755 /* Organization.swift */,
+				4E012B4421E3CA2E00C4B755 /* FinanceUA.swift */,
+				5AF93A91220B2584002D4F7E /* Currency.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5AF93A90220B19AC002D4F7E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E012B3021E3AA6300C4B755 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		8CC1A4642E0273AFE708AD20 /* Frameworks */ = {
@@ -223,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF93A92220B2584002D4F7E /* Currency.swift in Sources */,
 				4E012B3121E3AA6300C4B755 /* ViewController.swift in Sources */,
 				4E012B4121E3AC9200C4B755 /* Podfile in Sources */,
 				4E012B4321E3BD2200C4B755 /* Organization.swift in Sources */,
