@@ -45,7 +45,7 @@
         <!--Item 1-->
         <scene sceneID="WFG-fB-d3M">
             <objects>
-                <viewController id="7Av-IU-pS7" customClass="ViewController" customModule="UAFinance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Av-IU-pS7" customClass="OrganizationsListVC" customModule="UAFinance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fw2-Ge-Khc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +65,9 @@
                         <viewLayoutGuide key="safeArea" id="Aob-ep-xu6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Ans-iu-RbV"/>
+                    <connections>
+                        <outlet property="tableView" destination="8ub-hQ-xPx" id="Bfo-L2-ouk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPI-56-CK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
